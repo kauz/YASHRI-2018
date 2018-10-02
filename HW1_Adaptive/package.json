@@ -4,7 +4,9 @@
   "description": "Homework #1 for YASHRI.",
   "main": "index.html",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "compile": "webpack",
+    "dev": "npm run compile -- --watch --mode='development'",
+    "build": "NODE_ENV='production' npm run compile -- --mode='production'"
   },
   "repository": {
     "type": "git",
@@ -15,5 +17,16 @@
   "bugs": {
     "url": "https://github.com/kauzlein/YASHRI-2018/issues"
   },
-  "homepage": "https://github.com/kauzlein/YASHRI-2018#readme"
+  "homepage": "https://github.com/kauzlein/YASHRI-2018#readme",
+  "devDependencies": {
+    "@babel/core": "^7.1.2",
+    "@babel/preset-env": "^7.1.0",
+    "babel-loader": "^8.0.4",
+    "css-loader": "^1.0.0",
+    "mini-css-extract-plugin": "^0.4.3",
+    "node-sass": "^4.9.3",
+    "sass-loader": "^7.1.0",
+    "webpack": "^4.20.2",
+    "webpack-cli": "^3.1.2"
+  }
 }
