@@ -1,3 +1,5 @@
+let eventsJson = require('../../src/data/events.json');
+
 module.exports = class Event {
 
     loadEvents() {
@@ -13,10 +15,23 @@ module.exports = class Event {
             if (this.status === 200) {
                 let response = JSON.parse(this.responseText);
 
-                console.log(response);
-
                 response.events.forEach(function(event) {
-                    output += `<li>${event.title}</li>`;
+                    output += `<div class="event event_type_${event.type} event_size_${event.size}">
+                                    <div class="event__heading">
+                                        <i class="event__icon icon__${event.icon}"></i>
+                                        <p class="event__title">${event.title}</p>
+                                    </div>
+                                    <div class="event__source">${event.source}</div>
+                                    <div class="event__time">${event.time}</div>
+                                    ${event.description !== null ? `<div class="event__body">` + event.description + `</div>` : ``}
+                                    ${event.data !== undefined && event.data.image !== undefined ? `<img class="event__img" src="${event.data.image}" alt="${event.title}">` : ``}
+                                    ${event.data !== undefined && event.data.type === 'graph' ? `<img class="event__img" src="graph.jpg" alt="${event.title}">` : ``}
+                                    ${event.data !== undefined && event.data.albumcover !== undefined ? `<img class="event__img" src="album.jpg" alt="${event.title}">` : ``}
+                                    ${event.data !== undefined && event.data.humidity !== undefined ? `<div class="event__data"><p>Температура: ${event.data.temperature}</p> <p>Влажность: ${event.data.humidity}</p></div>` : ``}
+                                    ${event.data !== undefined && event.data.buttons !== undefined ? `<button>${event.data.buttons[0]}</button> <button>${event.data.buttons[1]}</button>` : ``}
+                               </div>
+                               <br>
+                              `;
                 });
 
             }
@@ -26,6 +41,7 @@ module.exports = class Event {
             }
 
             document.querySelector('.events').innerHTML = output;
+            console.log(eventsJson.events);
 
         };
 

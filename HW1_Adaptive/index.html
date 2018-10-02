@@ -1,21 +1,58 @@
 <!doctype html>
-<html lang="en">
+<html lang="ru">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport"
-          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Document</title>
+    <link rel="stylesheet" href="public/css/app.css">
 </head>
 <body>
 
-<button class="get-data">Get data</button>
 
-<main>
-    <div class="events">
+
+<!--HEADER-->
+<header class="header"><img class="logo" src="img/Яндекс Дом.svg" title="Логотип Яндекс.Дом" alt="Логотип Яндекс.Дом"/>
+    <nav class="nav nav_bold">
+        <ul class="nav__list">
+            <li class="nav__item"><a href="#" class="nav__link">Сводка</a></li>
+            <li class="nav__item"><a href="#" class="nav__link">Устройства</a></li>
+            <li class="nav__item"><a href="#" class="nav__link">Сценарии</a></li>
+        </ul>
+    </nav>
+</header>
+
+<!--MAIN-->
+<main class="main">
+
+    <div class="container">
+
+        <div class="events">
+
+            <template class="event-card">
+
+            </template>
+
+        </div>
 
     </div>
+
 </main>
+
+<!--FOOTER-->
+<footer class="footer">
+    <nav class="nav nav_footer">
+        <ui class="nav__list">
+            <li class="nav__item"><a href="#" class="nav__link">Помощь</a></li>
+            <li class="nav__item"><a href="#" class="nav__link">Обратная связь</a></li>
+            <li class="nav__item"><a href="#" class="nav__link">Разработчикам</a></li>
+            <li class="nav__item"><a href="#" class="nav__link">Условия использования</a></li>
+        </ui>
+    </nav>
+    <div class="footer__copyright">&copy; 2001–2017 ООО &laquo;Яндекс&raquo;</div>
+</footer>
+
+
 <script src="public/js/bundle.js"></script>
 </body>
 </html>
