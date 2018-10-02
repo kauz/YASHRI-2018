@@ -1,0 +1,33 @@
+@import "variables-global";
+@import "reset";
+@import "components/col/col";
+@import "components/container/container";
+@import "components/footer/footer";
+@import "components/header/header";
+@import "components/icon/icon";
+@import "components/logo/logo";
+@import "components/nav/nav";
+
+
+html {
+  height: 100%;
+  box-sizing: border-box;
+}
+
+body {
+  height: inherit;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: 64px 1fr 64px;
+  grid-template-areas: "h h"
+                       "c c"
+                       "f f";
+  margin: 0;
+  font-size: 16px;
+}
+
+.main {
+  grid-area: c;
+  margin-top: $header_min-height;
+  padding-bottom: 64px;
+}
