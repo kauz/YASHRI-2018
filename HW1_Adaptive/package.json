@@ -1,0 +1,19 @@
+{
+  "name": "hw1_adaptive",
+  "version": "1.0.0",
+  "description": "Homework #1 for YASHRI.",
+  "main": "index.html",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@github.com/kauzlein/YASHRI-2018.git"
+  },
+  "author": "kauzlein@gmail.com",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/kauzlein/YASHRI-2018/issues"
+  },
+  "homepage": "https://github.com/kauzlein/YASHRI-2018#readme"
+}
