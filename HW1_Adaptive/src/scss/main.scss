@@ -1,5 +1,6 @@
 @import "variables-global";
 @import "reset";
+@import "components/button/button";
 @import "components/container/container";
 @import "components/event/event";
 @import "components/footer/footer";
@@ -41,6 +42,11 @@ body {
   &__title {
     @extend %arial-bold,
             %font_sbig;
-    margin-bottom: 2.1%;
+    margin-bottom: 7%;
+    text-align: center;
+    @media screen and (min-width: $tablet + 1){
+      margin-bottom: 2.1%;
+      text-align: left
+    }
   }
 }

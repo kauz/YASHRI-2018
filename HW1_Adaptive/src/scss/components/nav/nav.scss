@@ -10,6 +10,12 @@
     @extend %arial;
   }
 
+  &__list {
+    @media screen and (max-width: $mobile-l){
+      display: none;
+    }
+  }
+
 
   &__item {
     display: inline-block;
@@ -26,4 +32,15 @@
     }
   }
 
+}
+
+
+.hamburger {
+  width: 16px;
+  height: 14px;
+  background: url("../img/hamburger.svg") no-repeat 100%;
+  cursor: pointer;
+  @media screen and (min-width: $mobile-l + 1){
+    display: none
+  }
 }

@@ -4,7 +4,7 @@
           %max-width,
           %font_micro;
   display: none;
-  @media screen and (min-width: $mobile-l + 1px) {
+  @media screen and (min-width: $tablet + 1px) {
       display: flex;
       grid-area: f;
       min-height: 64px;
@@ -16,7 +16,7 @@
 
   &__copyright {
     @extend %arial;
-    @media screen and (min-width: $mobile-l + 1px) {
+    @media screen and (min-width: $tablet + 1px) {
       color: $gray-3;
     }
   }

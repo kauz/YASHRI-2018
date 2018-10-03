@@ -1,0 +1,36 @@
+.button {
+  @extend %posr,
+          %arial-bold,
+          %font_small;
+  width: 132px;
+  height: 54px;
+  border-radius: 8px;
+  background-color: $gray-button;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  &:after {
+    content: "";
+    display: block;
+    border-radius: inherit;
+    height: 100%;
+    width: 100%;
+    opacity: 0;
+    background: rgba(0,0,0,.5);
+    transition: opacity .3s;
+    top: 0;
+    left: 0;
+    position: absolute;
+  }
+  &:hover:after {
+    opacity: 0.1;
+  }
+
+  &:active:after {
+    opacity: 0.2;
+  }
+
+  &_primary {
+    background-color: $primary;
+  }
+}
