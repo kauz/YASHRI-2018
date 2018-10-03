@@ -1,7 +1,7 @@
 @import "variables-global";
 @import "reset";
-@import "components/col/col";
 @import "components/container/container";
+@import "components/event/event";
 @import "components/footer/footer";
 @import "components/header/header";
 @import "components/icon/icon";
@@ -15,19 +15,32 @@ html {
 }
 
 body {
+  @extend %grid;
   height: inherit;
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
+  grid-template-columns: repeat(1, 1fr);
   grid-template-rows: 64px 1fr 64px;
-  grid-template-areas: "h h"
-                       "c c"
-                       "f f";
+  grid-template-areas: "h"
+                       "c"
+                       "f";
   margin: 0;
   font-size: 16px;
+  @media screen and (max-width: $mobile-s) {
+    font-size: 20px;
+  }
+
+  @media screen and (min-width: $_4k) {
+    font-size: 30px;
+  }
 }
 
 .main {
   grid-area: c;
   margin-top: $header_min-height;
-  padding-bottom: 64px;
+  margin-bottom: $header_min-height;
+
+  &__title {
+    @extend %arial-bold,
+            %font_sbig;
+    margin-bottom: 2.1%;
+  }
 }

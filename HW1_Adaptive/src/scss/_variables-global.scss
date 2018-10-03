@@ -1,6 +1,7 @@
 @import "partials/colors";
 @import "partials/fonts";
 @import "partials/mixins";
+@import "partials/sizes";
 
 
 // Flexbox
@@ -13,6 +14,10 @@
 %just-center {justify-content: center}
 %just-between {justify-content: space-between}
 %grow {flex-grow: 1}
+
+
+// Grid
+%grid {display: grid}
 
 
 // Size

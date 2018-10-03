@@ -1,12 +1,22 @@
 @import "variables";
 
-.icon {
+.event__icon {
   display: block;
-  width: 24px;
-  height: 24px;
-  background-size: cover;
+  width: 48px;
+  height: 48px;
+  background: 100% center no-repeat;
+  margin-right: 10px;
 }
 
-.icon_inline {
-  display: inline-block;
-}
+
+.icon__stats { background-image: url("./../img/icons/stats.svg") };
+.icon__key { background-image: url("./../img/icons/key.svg") };
+.icon__robot-cleaner { background-image: url("./../img/icons/robot-cleaner.svg") };
+.icon__router { background-image: url("./../img/icons/router.svg") };
+.icon__thermal { background-image: url("./../img/icons/thermal.svg") };
+.icon__ac { background-image: url("./../img/icons/ac-white.svg") };
+.icon__music { background-image: url("./../img/icons/music.svg") };
+.icon__fridge { background-image: url("./../img/icons/fridge.svg") };
+.icon__battery { background-image: url("./../img/icons/battery.svg") };
+.icon__cam { background-image: url("./../img/icons/cam-white.svg") };
+.icon__kettle { background-image: url("./../img/icons/kettle.svg") };

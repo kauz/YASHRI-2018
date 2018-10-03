@@ -29,10 +29,23 @@ module.exports = {
                 test: /\.s[ac]ss$/,
                 use: [
                     {
-                        loader: ExtractTextPlugin.loader
+                        loader: ExtractTextPlugin.loader,
+                        options: {
+                            publicPath: '../'
+                        }
                     },
                     "css-loader", 'sass-loader'
                 ]
+            },
+
+            {
+
+                test: /\.svg$|\.png$|\.jpg$/,
+                loader: 'file-loader',
+                options: {
+                    name: 'img/[name].[ext]'
+                }
+
             }
 
 
