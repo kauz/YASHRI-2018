@@ -18,14 +18,41 @@
   @extend %flex,
           %flex-column,
           %just-between,
-          %arial;
+          %arial,
+          %posr;
   grid-row: span 1;
   border-radius: 20px;
+
+  &__hide, &__go {
+    @extend %posa;
+    content: '';
+    display: none;
+    right: 0;
+    width: 16px;
+    height: 16px;
+    padding: 16px;
+    border-radius: 50%;
+    cursor: pointer;
+  }
+
+  &__hide {
+    top: 0;
+    background: url("../img/cross.svg") center no-repeat;
+  }
+
+
+  &__go {
+    bottom: 0;
+    background: url("../img/shape.svg") center no-repeat;
+  }
 
   &:hover {
     background: $gray-event;
     box-shadow: 0 2px 6px 0 rgba(197,186,186,0.50);
     .event__body {background-color: $gray-event;}
+    .event__hide, .event__go  {
+      display: block;
+    }
 }
 
   &_type_info {
@@ -40,6 +67,7 @@
     }
     .event__heading, .event__status { color: $white-event; background: $critical; }
     .event__source, .event__time { color: inherit }
+    .event__hide { filter: brightness(3)}
   }
 
   &_size_s {

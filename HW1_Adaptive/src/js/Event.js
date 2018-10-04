@@ -68,6 +68,7 @@ module.exports = class Event {
                                     
                                     ${event.data !== undefined ? `</div>` : ``}
                 
+                                                    <i class="event__go"></i>
                                                     
                                                </div>`;
                 });
