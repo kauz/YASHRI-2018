@@ -16,25 +16,28 @@
 .main__title {
   font-size: 2.250em; }
 
-.container, .track__body, .m-nav__volume, .event, .event__heading, .event__body, .event__data, .header {
+.container, .track__body, .m-nav__volume, .data__items_cam, .event, .event__heading, .event__body, .event__data, .header {
   display: flex; }
+
+.event__data {
+  flex-flow: row wrap; }
 
 .container, .event {
   flex-flow: column nowrap; }
 
-.track__body, .m-nav__volume, .event__heading, .footer, .header {
+.track__body, .m-nav__volume, .data__items_cam, .event__heading, .footer, .header {
   align-items: center; }
 
 .event__body {
   align-items: flex-end; }
 
-.track__body, .m-nav__volume, .event, .footer {
+.track__body, .m-nav__volume, .data__items_cam, .event, .footer {
   justify-content: space-between; }
 
 .music, .music__track, .track, .music__nav, .m-nav, .events, body {
   display: grid; }
 
-.container, .music__albumcover, .track__input, .m-nav__volume-input, .footer {
+.container, .music__albumcover, .track__input, .m-nav__volume-input, .data__items_cam, .footer {
   width: 100%; }
 
 .container {
@@ -218,6 +221,10 @@ table {
   margin-left: 15px;
   color: #a1a1a1;
   opacity: .84; }
+
+.data__items_cam {
+  min-height: 40px;
+  padding-top: 10px; }
 
 @media screen and (min-width: 769px) {
   .data__item {

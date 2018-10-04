@@ -6,7 +6,8 @@
   "scripts": {
     "compile": "webpack",
     "dev": "npm run compile -- --watch --mode='development'",
-    "build": "NODE_ENV='production' npm run compile -- --mode='production'"
+    "build": "NODE_ENV='production' npm run compile -- --mode='production'",
+    "serve": "webpack-dev-server --open"
   },
   "repository": {
     "type": "git",
@@ -30,6 +31,7 @@
     "postcss-loader": "^3.0.0",
     "sass-loader": "^7.1.0",
     "webpack": "^4.20.2",
-    "webpack-cli": "^3.1.2"
+    "webpack-cli": "^3.1.2",
+    "webpack-dev-server": "^3.1.9"
   }
 }

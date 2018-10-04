@@ -1,4 +1,4 @@
-let robot = require('../img/robot.png');
+let robot = require('../img/get_it_from_mocks_:3.jpg');
 let graph = require('../img/graph.svg');
 let logo = require('../img/logo.svg');
 
@@ -22,6 +22,8 @@ module.exports = class Event {
                 response.events.forEach(function(event) {
                     output += `<div class="event event_type_${event.type} event_size_${event.size}">
 
+                                    <i class="event__hide"></i>
+
                                     <div class="event__heading">
                                         <i class="event__icon icon__${event.icon}"></i>
                                         <p class="event__title">${event.title}</p>
@@ -37,7 +39,8 @@ module.exports = class Event {
                                     
                                     ${event.data !== undefined ? `<div class="event__data">` : ``}
                                         
-                                        ${event.data !== undefined && event.data.image !== undefined ? `<img class="data__img event__img" src="public/${robot}" alt="${event.title}">` : ``}
+                                        ${event.data !== undefined && event.data.image !== undefined ? `<img class="data__img event__img" src="public/img/${event.data.image}" alt="${event.title}">` : ``}
+                                        ${event.icon === 'cam' ? `<div class="data__items data__items_cam"><p class="data__item">Приближение: <span class="data__digit">78%</span></p> <p class="data__item">Яркость: <span class="data__digit">50%</span></p></div>` : ``}
                                         ${event.data !== undefined && event.data.type === 'graph' ? `<img class="data__img event__img" src="public/${graph}" alt="${event.title}">` : ``}
                                         ${event.data !== undefined && event.data.albumcover !== undefined ? `<div class="music data__music">
                                             <img class="data__img music__albumcover" src="${event.data.albumcover}" alt="albumcover">

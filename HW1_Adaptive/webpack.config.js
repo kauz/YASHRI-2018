@@ -53,6 +53,10 @@ module.exports = {
         ]
     },
 
+    devServer: {
+              contentBase: './'
+    },
+
     plugins: [
 
         new ExtractTextPlugin({

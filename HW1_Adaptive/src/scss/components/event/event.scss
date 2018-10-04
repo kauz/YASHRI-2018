@@ -141,7 +141,7 @@
   &__data {
     padding: $event-padding;
     flex-grow: 2;
-    @extend %flex, %font_middle;
+    @extend %flex, %flex-row, %font_middle;
     @media screen and (min-width: $laptop-l){
       align-items: flex-end;
     }
