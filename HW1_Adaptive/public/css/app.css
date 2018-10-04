@@ -240,8 +240,7 @@ table {
   border-radius: 20px; }
   .event:hover {
     background: #f3f3f3;
-    box-shadow: 0 2px 6px 0 rgba(197, 186, 186, 0.5);
-    cursor: pointer; }
+    box-shadow: 0 2px 6px 0 rgba(197, 186, 186, 0.5); }
     .event:hover .event__body {
       background-color: #f3f3f3; }
   .event_type_info {

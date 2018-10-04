@@ -45,7 +45,7 @@ module.exports = class Event {
                                                     <div class="music__track track">
                                                         <div class="track__description">${event.data.artist} - ${event.data.track.name}</div>
                                                         <div class="track__body">
-                                                            <input class="track__input" type="range" min="0" max="24031" step="1" value="0">
+                                                            <input class="track__input" type="range" min="0" max="24000" step="1" value="0">
                                                             <div class="track__length">${event.data.track.length}</div>
                                                         </div>
                                                     </div>
