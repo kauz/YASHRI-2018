@@ -108,16 +108,15 @@ table {
     border-radius: inherit;
     height: 100%;
     width: 100%;
-    opacity: 0;
-    background: rgba(0, 0, 0, 0.5);
-    transition: opacity .3s;
+    background: rgba(0, 0, 0, 0);
+    transition: background .3s;
     top: 0;
     left: 0;
     position: absolute; }
   .button:hover:after {
-    opacity: 0.1; }
+    background: rgba(255, 255, 255, 0.2); }
   .button:active:after {
-    opacity: 0.2; }
+    background: rgba(0, 0, 0, 0.1); }
   .button_primary {
     background-color: #ffd93e; }
 
