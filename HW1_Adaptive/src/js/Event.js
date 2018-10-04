@@ -80,8 +80,6 @@ module.exports = class Event {
             }
 
             document.querySelector('.events').innerHTML = output;
-            console.log(eventsJson.events);
-            console.log(robot);
 
         };
 
