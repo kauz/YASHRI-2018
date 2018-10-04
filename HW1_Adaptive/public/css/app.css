@@ -153,6 +153,10 @@ table {
       background-color: #f3f3f3; }
   .event_type_info {
     background-color: #fafafa; }
+  .event_type_critical .event__body {
+    border-top-right-radius: 20px;
+    border-top-left-radius: 20px;
+    margin-top: -15px; }
   .event_type_critical .event__heading, .event_type_critical .event__status {
     color: #fafafa;
     background: #db5341; }
@@ -174,20 +178,12 @@ table {
     @media screen and (min-width: 1024px) {
       .event_size_m {
         grid-column: span 3; } }
-    .event_size_m .event__body {
-      border-top-right-radius: 20px;
-      border-top-left-radius: 20px;
-      margin-top: -15px; }
   .event_size_l {
     grid-row: span 3;
     grid-column: span 1; }
     @media screen and (min-width: 1024px) {
       .event_size_l {
         grid-column: span 4; } }
-    .event_size_l .event__body {
-      border-top-right-radius: 20px;
-      border-top-left-radius: 20px;
-      margin-top: -15px; }
   .event__heading {
     flex-wrap: nowrap;
     padding: 25px 15px 8%;

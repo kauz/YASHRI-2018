@@ -36,6 +36,11 @@
   }
 
   &_type_critical {
+    .event__body {
+      border-top-right-radius: 20px;
+      border-top-left-radius: 20px;
+      margin-top: -15px;
+    }
     .event__heading, .event__status { color: $white-event; background: $critical; }
     .event__source, .event__time { color: inherit }
   }
@@ -61,9 +66,6 @@
     }
     .event__body {
       @extend %font_ubig;
-      border-top-right-radius: 20px;
-      border-top-left-radius: 20px;
-      margin-top: -15px;
     }
   }
 
@@ -75,9 +77,6 @@
     }
     .event__body {
       @extend %font_ubig;
-      border-top-right-radius: 20px;
-      border-top-left-radius: 20px;
-      margin-top: -15px;
     }
   }
 
