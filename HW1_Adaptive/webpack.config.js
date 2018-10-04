@@ -2,6 +2,7 @@ let webbpack = require('webpack');
 let ExtractTextPlugin = require("mini-css-extract-plugin");
 let path = require('path');
 let inProduction = (process.env.NODE_ENV === 'production');
+let autoprefixer = require('autoprefixer');
 
 module.exports = {
 
@@ -34,7 +35,7 @@ module.exports = {
                             publicPath: '../'
                         }
                     },
-                    "css-loader", 'sass-loader'
+                    'css-loader', 'postcss-loader', 'sass-loader'
                 ]
             },
 

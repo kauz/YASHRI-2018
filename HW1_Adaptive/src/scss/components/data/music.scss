@@ -73,11 +73,12 @@
 
   &__prev, &__next {
     grid-column: span 1;
-    background: url("../img/Prev.svg") center no-repeat;
-    cursor: pointer;
+    min-width: 60px;
     outline: none;
     border: none;
     padding: 0;
+    background: url("../img/Prev.svg") center no-repeat;
+    cursor: pointer;
     transition: filter ease .5s;
     &:hover {
       filter: opacity(80%);
