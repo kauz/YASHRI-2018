@@ -1,7 +1,6 @@
 let robot = require('../img/robot.png');
 let graph = require('../img/graph.svg');
 let logo = require('../img/logo.svg');
-let player = require('../img/player.png');
 
 let eventsJson = require('../../src/data/events.json');
 
@@ -40,7 +39,27 @@ module.exports = class Event {
                                         
                                         ${event.data !== undefined && event.data.image !== undefined ? `<img class="data__img event__img" src="public/${robot}" alt="${event.title}">` : ``}
                                         ${event.data !== undefined && event.data.type === 'graph' ? `<img class="data__img event__img" src="public/${graph}" alt="${event.title}">` : ``}
-                                        ${event.data !== undefined && event.data.albumcover !== undefined ? `<img class="data__img event__img" src="public/${player}" alt="${event.title}">` : ``}
+                                        ${event.data !== undefined && event.data.albumcover !== undefined ? `<div class="music data__music">
+                                            <img class="data__img music__albumcover" src="${event.data.albumcover}" alt="albumcover">
+                                            
+                                                    <div class="music__track track">
+                                                        <div class="track__description">${event.data.artist} - ${event.data.track.name}</div>
+                                                        <div class="track__body">
+                                                            <input class="track__input" type="range" min="0" max="24031" step="1" value="0">
+                                                            <div class="track__length">${event.data.track.length}</div>
+                                                        </div>
+                                                    </div>
+                                                    
+                                                    <div class="music__nav m-nav">
+                                                        <button class="m-nav__prev"></button>
+                                                        <button class="m-nav__next"></button>
+                                                        <div class="m-nav__volume">
+                                                            <input class="m-nav__volume-input" type="range" min="0" max="100" step="1" value="${event.data.volume}">
+                                                            <div class="m-nav__value">${event.data.volume}%</div>
+                                                        </div>
+                                                    </div>
+                                            </div>
+                                        ` : ``}
                                         ${event.data !== undefined && event.data.humidity !== undefined ? `<div class="data__items"><p class="data__item">Температура: <span class="data__digit">${event.data.temperature}&#8451;</span></p> <p class="data__item">Влажность: <span class="data__digit">${event.data.humidity}%</span></p></div>` : ``}
                                         ${event.data !== undefined && event.data.buttons !== undefined ? `<div class="data__buttons"><button class="data__button button button_primary">${event.data.buttons[0]}</button> <button class="data__button button">${event.data.buttons[1]}</button></div>` : ``}
                                     
