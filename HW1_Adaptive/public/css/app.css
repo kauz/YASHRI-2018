@@ -158,6 +158,10 @@ table {
     @media screen and (min-width: 1024px) {
       .event_size_s {
         grid-column: span 2; } }
+    .event_size_s .event__source, .event_size_s .event__time {
+      display: block;
+      float: none;
+      margin: 10px 0; }
   .event_size_m {
     grid-row: span 2;
     grid-column: span 1; }

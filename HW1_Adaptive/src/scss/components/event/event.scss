@@ -42,6 +42,11 @@
     @media screen and (min-width: $laptop){
       grid-column: span 2;
     }
+    .event__source, .event__time {
+      display: block;
+      float: none;
+      margin: 10px 0;
+    }
   }
 
   &_size_m {
