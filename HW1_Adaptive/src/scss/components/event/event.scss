@@ -11,11 +11,15 @@
   @media screen and (min-width: $laptop){
     grid-template-columns: repeat(6, 1fr);
   }
+  @media screen and (min-width: $laptop-l){
+    grid-auto-rows: unset;
+  }
 }
 
 .event {
   @extend %flex,
           %flex-column,
+          %just-between,
           %arial;
   grid-row: span 1;
   border-radius: 20px;
@@ -119,24 +123,32 @@
     color: $black-2;
   }
   &__body {
-    @extend %arial,
+    @extend %flex,
+            %align-end,
+            %arial,
             %font_smiddle;
     background: $white-event;
     padding: ($event-padding+15px) ($event-padding+5px) ($event-pr-pad+10%);
     border-bottom-left-radius: 20px;
     border-bottom-right-radius: 20px;
-    justify-self: flex-end;
+    flex-grow: 3;
     @media screen and (min-width: $mobile-l + 1){
       padding: ($event-padding+15px) ($event-padding+5px) ($event-pr-pad+5%);
     }
     @media screen and (min-width: $tablet + 1){
       padding: $event-padding $event-padding $event-pr-pad;
     }
+    @media screen and (min-width: $laptop-l + 1){
+      padding: ($event-padding+20) $event-padding $event-pr-pad;
+    }
   }
   &__data {
     padding: $event-padding;
-    flex-grow: 1;
+    flex-grow: 2;
     @extend %flex, %font_middle;
+    @media screen and (min-width: $laptop-l){
+      align-items: flex-end;
+    }
   }
   &__img {
     width: 100%;
