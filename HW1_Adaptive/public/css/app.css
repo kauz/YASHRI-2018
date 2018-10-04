@@ -46,7 +46,7 @@
 .event, .event__source, .event__time, .event__body, .footer__copyright, .nav_footer {
   font-family: ArialMT, "Liberation Sans", sans-serif; }
 
-.button, .event__title, .data__digit, .nav_bold, .main__title {
+.button, .data__digit, .event__title, .nav_bold, .main__title {
   font-family: Arial-BoldMT, "Liberation Sans", sans-serif;
   font-weight: bold; }
 
@@ -127,6 +127,11 @@ table {
   @media screen and (min-width: 769px) {
     .container {
       padding: 0 12.5%; } }
+
+@media screen and (min-width: 769px) {
+  .data__item {
+    display: inline-block;
+    margin: 5px; } }
 
 .events {
   grid-template-columns: repeat(1, 1fr);
