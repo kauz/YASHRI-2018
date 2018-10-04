@@ -147,9 +147,16 @@
 
 
 .data {
+  &__button {
+
+  }
   &__item {
     @media screen and (min-width: $tablet + 1){
       display: inline-block;
+      margin: 5px;
     }
+  }
+  &__digit {
+    @extend %arial-bold;
   }
 }

@@ -41,7 +41,7 @@ module.exports = class Event {
                                         ${event.data !== undefined && event.data.image !== undefined ? `<img class="data__img event__img" src="public/${robot}" alt="${event.title}">` : ``}
                                         ${event.data !== undefined && event.data.type === 'graph' ? `<img class="data__img event__img" src="public/${graph}" alt="${event.title}">` : ``}
                                         ${event.data !== undefined && event.data.albumcover !== undefined ? `<img class="data__img event__img" src="public/${player}" alt="${event.title}">` : ``}
-                                        ${event.data !== undefined && event.data.humidity !== undefined ? `<div class="data__items"><p class="data__item">Температура: ${event.data.temperature}</p> <p class="data__item">Влажность: ${event.data.humidity}</p></div>` : ``}
+                                        ${event.data !== undefined && event.data.humidity !== undefined ? `<div class="data__items"><p class="data__item">Температура: <span class="data__digit">${event.data.temperature}&#8451;</span></p> <p class="data__item">Влажность: <span class="data__digit">${event.data.humidity}%</span></p></div>` : ``}
                                         ${event.data !== undefined && event.data.buttons !== undefined ? `<div class="data__buttons"><button class="data__button button button_primary">${event.data.buttons[0]}</button> <button class="data__button button">${event.data.buttons[1]}</button></div>` : ``}
                                     
                                     ${event.data !== undefined ? `</div>` : ``}
