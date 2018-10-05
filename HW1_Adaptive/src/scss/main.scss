@@ -51,3 +51,10 @@ body {
     }
   }
 }
+
+
+.cam__img {
+  @media screen and (max-width: $laptop){
+    touch-action: auto;
+  }
+}
