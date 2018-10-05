@@ -495,3 +495,7 @@ body {
         margin-bottom: 2.1%;
         text-align: left; } }
 
+@media screen and (max-width: 1024px) {
+  .cam__img {
+    touch-action: auto; } }
+
