@@ -167,6 +167,7 @@
     }
   }
   &__data {
+    overflow: hidden;
     padding: $event-padding;
     flex-grow: 2;
     @extend %flex, %flex-row, %font_middle;

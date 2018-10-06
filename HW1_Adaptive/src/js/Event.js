@@ -4,9 +4,7 @@ let logo = require('../img/logo.svg');
 
 let eventsJson = require('../../src/data/events.json');
 
-module.exports = class Event {
-
-    loadEvents() {
+module.exports = function load() {
         let xhr = new XMLHttpRequest();
 
         xhr.open('GET', `./src/data/events.json`, true);
@@ -84,5 +82,4 @@ module.exports = class Event {
         };
 
         xhr.send();
-    }
-}
+    };

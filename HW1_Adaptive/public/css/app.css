@@ -349,6 +349,7 @@ table {
       .event__body {
         padding: 30px 10px 3%; } }
   .event__data {
+    overflow: hidden;
     padding: 10px;
     flex-grow: 2; }
     @media screen and (min-width: 1440px) {
@@ -495,7 +496,12 @@ body {
         margin-bottom: 2.1%;
         text-align: left; } }
 
-@media screen and (max-width: 1024px) {
-  .cam__img {
-    touch-action: auto; } }
+#imgContainer .cam__img {
+  touch-action: none;
+  height: 100%;
+  min-height: 424px;
+  background: url(../img/get_it_from_mocks_:3.jpg) 0/100% no-repeat; }
+  @media screen and (max-width: 768px) {
+    #imgContainer .cam__img {
+      min-height: 200px; } }
 

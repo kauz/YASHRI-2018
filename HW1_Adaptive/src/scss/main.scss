@@ -52,9 +52,15 @@ body {
   }
 }
 
+#imgContainer {
+  .cam__img {
+    touch-action: none;
+    height: 100%;
+    min-height: 424px;
+    background: url('../img/get_it_from_mocks_:3.jpg') 0 / 100% no-repeat;
+    @media screen and (max-width: $tablet) {
+      min-height: 200px;
+    }
 
-.cam__img {
-  @media screen and (max-width: $laptop){
-    touch-action: auto;
-  }
+    }
 }

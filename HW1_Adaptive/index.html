@@ -33,9 +33,39 @@
 
         <div class="events">
 
-            <template class="event-card">
+            <div class="event event_type_critical event_size_l">
 
-            </template>
+                <i class="event__hide"></i>
+
+                <div class="event__heading">
+                    <i class="event__icon icon__cam"></i>
+                    <p class="event__title">Пылесос застрял</p>
+                </div>
+
+                <div class="event__status">
+                    <div class="event__source">Сенсор движения</div>
+                    <div class="event__time">16:17, Сегодня</div>
+                </div>
+
+                <div class="event__body">Робопылесос не смог сменить свое местоположение в течение последних 3 минут. Похоже, ему нужна помощь.</div>
+
+
+                <div class="event__data" id="imgContainer">
+                    <div class="data__img event__img cam__img"></div>
+
+                    <!--<img class="data__img event__img cam__img" src="public/img/get_it_from_mocks_:3.jpg" alt="Пылесос застрял">-->
+
+                </div>
+
+                <div class="event__data">
+
+                    <div class="data__items data__items_cam"><p class="data__item">Приближение: <span class="data__digit" id="percentage">0%</span></p> <p class="data__item">Яркость: <span class="data__digit" id="brightness">100%</span></p></div>
+
+                </div>
+
+                <i class="event__go"></i>
+
+            </div>
 
         </div>
 
