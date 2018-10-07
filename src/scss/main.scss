@@ -26,12 +26,12 @@ body {
                        "f";
   margin: 0;
   font-size: 16px;
-  @media screen and (max-width: $mobile-s) {
-    font-size: 20px;
+  @media screen and (max-width: $mobile-m) {
+    font-size: 14px;
   }
 
   @media screen and (min-width: $_4k) {
-    font-size: 30px;
+    font-size: 25px;
   }
 }
 
