@@ -88,7 +88,10 @@ module.exports = class Event {
                 output += '<li>Something went wrong</li>'
             }
 
-            document.querySelector('.events').innerHTML = output;
+            let container = document.querySelector('.events');
+            if (container) {
+                container.innerHTML = output;
+            }
 
         };
 
