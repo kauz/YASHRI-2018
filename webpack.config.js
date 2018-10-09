@@ -9,7 +9,8 @@ module.exports = {
     entry: {
         app: [
             './src/js/app.js',
-            './src/scss/main.scss'
+            './src/scss/main.scss',
+            './src/app/index.html'
         ]
     },
 
@@ -20,6 +21,12 @@ module.exports = {
 
     module: {
         rules: [
+
+            {
+                test: /\.html$/,
+                use: ['file-loader?name=[name].[ext]', 'extract-loader', 'html-loader'],
+            },
+
             {
                 test: /\.js$/,
                 exclude: /node_modules/,
@@ -54,7 +61,11 @@ module.exports = {
     },
 
     devServer: {
-              contentBase: './'
+        contentBase: './',
+        headers: {
+            'Access-Control-Allow-Origin': '*',
+            'Access-Control-Allow-Methods': 'GET, PUT, POST, DELETE, HEAD, OPTIONS'
+        }
     },
 
     plugins: [

@@ -11,7 +11,7 @@ module.exports = class Event {
     loadEvents() {
         let xhr = new XMLHttpRequest();
 
-        xhr.open('GET', `./src/data/events.json`, true);
+        xhr.open('GET', `../../src/data/events.json`, true);
 
         xhr.onload = function() {
 
