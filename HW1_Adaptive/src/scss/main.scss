@@ -57,7 +57,7 @@ body {
     touch-action: none;
     height: 100%;
     min-height: 424px;
-    background: url('../img/get_it_from_mocks_:3.jpg') 0 / 100% no-repeat;
+    background: url('../img/get_it_from_mocks_:3@3x.jpg') 0 / 130% repeat-x;
     @media screen and (max-width: $tablet) {
       min-height: 200px;
     }
