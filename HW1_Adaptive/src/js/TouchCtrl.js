@@ -125,15 +125,25 @@ module.exports = (function() {
             //if (ev.target.classList.contains('cam__img') && ev.pointerType === 'touch') {
                 let el = document.querySelector('.cam__img');
                 // Install event handlers for the pointer target
-                el.onpointerdown = pointerdown_handler;
-                el.onpointermove = pointermove_handler;
+                // el.onpointerdown = pointerdown_handler;
+                el.addEventListener('pointerdown', pointerdown_handler);
+                // el.onpointermove = pointermove_handler;
+                el.addEventListener('pointermove', pointermove_handler);
+
 
                 // Use same handler for pointer{up,cancel,out,leave} events since
                 // the semantics for these events - in this app - are the same.
-                el.onpointerup = pointerup_handler;
-                el.onpointercancel = pointerup_handler;
-                el.onpointerout = pointerup_handler;
-                el.onpointerleave = pointerup_handler;
+                // el.onpointerup = pointerup_handler;
+                el.addEventListener('pointerup', pointerup_handler);
+
+                // el.onpointercancel = pointerup_handler;
+                el.addEventListener('pointercancel', pointerup_handler);
+
+                // el.onpointerout = pointerup_handler;
+                el.addEventListener('pointerout', pointerup_handler);
+                // el.onpointerleave = pointerup_handler;
+                el.addEventListener('pointerleave', pointerup_handler);
+
             //}
 
         }
