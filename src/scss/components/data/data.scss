@@ -12,6 +12,9 @@
               %max-width;
       min-height: 40px;
       padding-top: 10px;
+      @media screen and (min-width: $laptop) {
+        display: none;
+      }
     }
   }
   &__item {
