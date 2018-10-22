@@ -10,7 +10,7 @@ module.exports = (function() {
     let scale = 1;
 
     let pointerdown_handler = function (ev) {
-        // console.log('down', ev)
+        console.log('down', ev);
         // The pointerdown event signals the start of a touch interaction.
         // This event is cached to support 2-finger gestures
         evCache.push(ev);
